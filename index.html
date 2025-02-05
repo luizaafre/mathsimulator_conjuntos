@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Conjuntos - Pertence e Não Pertence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Conjuntos</h1>
+        <p>Adicione elementos aos conjuntos A, B e C e veja os resultados das operações.</p>
+
+        <div class="sets">
+            <div class="set" id="setA">
+                <h2>Conjunto A</h2>
+                <input type="text" id="addA" placeholder="Adicionar ao A">
+                <button onclick="addElement('A')">Adicionar</button>
+                <ul id="listA"></ul>
+            </div>
+            <div class="set" id="setB">
+                <h2>Conjunto B</h2>
+                <input type="text" id="addB" placeholder="Adicionar ao B">
+                <button onclick="addElement('B')">Adicionar</button>
+                <ul id="listB"></ul>
+            </div>
+            <div class="set" id="setC">
+                <h2>Conjunto C</h2>
+                <input type="text" id="addC" placeholder="Adicionar ao C">
+                <button onclick="addElement('C')">Adicionar</button>
+                <ul id="listC"></ul>
+            </div>
+        </div>
+
+        <h3>Verificar se um valor pertence a um conjunto</h3>
+        <input type="text" id="checkValue" placeholder="Valor para verificar">
+        <button onclick="checkPertence()">Verificar</button>
+
+        <div class="operations">
+            <button onclick="performOperation('uniao')">União (A ∪ B ∪ C)</button>
+            <button onclick="performOperation('intersecao')">Interseção (A ∩ B ∩ C)</button>
+            <button onclick="performOperation('diferenca')">Diferença (A - B - C)</button>
+        </div>
+
+        <h2>Resultado</h2>
+        <div id="resultado"></div>
+        <div id="pertenceResultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
